@@ -24,6 +24,8 @@ function handleEvent(event) {
     return Promise.resolve(null);
   }
 
+console.log("🔍 userId:", event.source.userId);
+  
   return client.replyMessage(event.replyToken, {
     type: 'text',
     text: `「${event.message.text}」を受け取りました。ありがとうございます！`,
